@@ -1,18 +1,15 @@
 import Product from "../Product";
-import useAPI from "../../hook/useAPI";
+import Header from "../Header";
+
+import Footer from "../Footer";
 
 function App() {
-  const { apiData } = useAPI();
   return (
     <div className="App">
-      {apiData.map((product) => (
-        <Product
-          key={Product.id}
-          name={Product.name}
-          description={Product.description}
-          imgSrc={Product.imgSrc}
-        ></Product>
-      ))}
+      <Header></Header>
+      <Product></Product>
+
+      <Footer></Footer>
     </div>
   );
 }

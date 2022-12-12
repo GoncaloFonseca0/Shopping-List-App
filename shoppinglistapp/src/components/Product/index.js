@@ -1,25 +1,21 @@
 import useAPI from "../../hook/useAPI";
-import button from "../button";
-const Product = ({
-  handleOnclick,
+import Button from "../Button";
+import { useState } from "react";
 
-  imgSrc,
-  name,
-  description,
-  calories,
-  id,
-}) => {
-  const saveUserData = () => {
-    alert("Click Happened");
-  };
+const Product = ({ imgSrc, name, description, calories, id }) => {
+  const { apiData } = useAPI();
+
   return (
-    <div className={id}>
-      <img alt="product img" src={imgSrc}></img>
-      <p>{name}</p>
-      <p>{description}</p>
-      <button onMouseOver={handleOnclick} onClick={saveUserData}>
-        click me
-      </button>
+    <div>
+      {apiData.map((product) => (
+        <div className="Products">
+          <img alt="product img" src={product.imgSrc}></img>
+          <p>{product.name}</p>
+          <p>{product.description}</p>
+          <p>{product.calories}</p>
+          <Button></Button>
+        </div>
+      ))}
     </div>
   );
 };

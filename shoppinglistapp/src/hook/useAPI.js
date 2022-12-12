@@ -7,6 +7,10 @@ const useAPI = () => {
     fetch(`${baseUrl}`)
       .then((response) => response.json())
       .then((data) => setApiData(data));
+
+    fetch("https://demo.grocy.info/api/objects/products?limit=5")
+      .then((res) => res.json())
+      .then((data) => setApiData(data));
   };
   useEffect(() => {
     callAPI();
