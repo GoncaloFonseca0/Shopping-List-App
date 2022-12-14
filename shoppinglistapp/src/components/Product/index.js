@@ -1,19 +1,21 @@
 import useAPI from "../../hook/useAPI";
 import Button from "../Button";
 import { useState } from "react";
+import "./index.scss";
 
-const Product = ({ imgSrc, name, description, calories, id }) => {
+const Product = ({ add, remove }) => {
   const { apiData } = useAPI();
 
   return (
-    <div>
+    <div className="products-title">
       {apiData.map((product) => (
         <div className="Products">
           <img alt="product img" src={product.imgSrc}></img>
-          <p>{product.name}</p>
+          <h1 className="name">{product.name}</h1>
           <p>{product.description}</p>
-          <p>{product.calories}</p>
-          <Button></Button>
+          <p>Calories: {product.calories}</p>
+          <p> </p>
+          <Button add={add} remove={remove}></Button>
         </div>
       ))}
     </div>
