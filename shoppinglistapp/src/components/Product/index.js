@@ -15,7 +15,11 @@ const Product = ({ add, remove }) => {
           <p>{product.description}</p>
           <p>Calories: {product.calories}</p>
           <p> </p>
-          <Button add={add} remove={remove}></Button>
+          <Button
+            className="product-quantity"
+            add={add}
+            remove={remove}
+          ></Button>
         </div>
       ))}
     </div>

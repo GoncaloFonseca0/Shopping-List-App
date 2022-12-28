@@ -1,10 +1,16 @@
 import { useState } from "react";
+import "./index.scss";
 
 const Button = ({ add, remove }) => {
   return (
     <div>
-      <button onClick={add}>+</button>
-      <button onClick={remove}>-</button>
+      <button className="primary-button" onClick={add}>
+        +
+      </button>
+      <span>0</span>
+      <button className="secundary-button" onClick={remove}>
+        -
+      </button>
     </div>
   );
 };
