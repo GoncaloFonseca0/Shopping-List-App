@@ -1,16 +1,22 @@
 import { useState } from "react";
 import "./index.scss";
 
-const Button = ({ add, remove }) => {
+const Button = ({ currCalories, updateCalories, calories }) => {
+  const [count, setCount] = useState(0);
+  const add = () => {
+    setCount(count + 1);
+    updateCalories(currCalories + calories);
+  };
+
+  const remove = () => {
+    setCount(count - 1);
+    updateCalories(currCalories - calories);
+  };
   return (
     <div>
-      <button className="primary-button" onClick={add}>
-        +
-      </button>
-      <span>0</span>
-      <button className="secundary-button" onClick={remove}>
-        -
-      </button>
+      <h3>Quantity {count}</h3>
+      <button onClick={() => remove()}>-</button>
+      <button onClick={() => add()}>+</button>
     </div>
   );
 };

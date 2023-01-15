@@ -1,9 +1,9 @@
 import useAPI from "../../hook/useAPI";
 import Button from "../Button";
-import { useState } from "react";
+
 import "./index.scss";
 
-const Product = ({ add, remove }) => {
+const Product = ({ currCalories, updateCalories }) => {
   const { apiData } = useAPI();
 
   return (
@@ -16,9 +16,9 @@ const Product = ({ add, remove }) => {
           <p>Calories: {product.calories}</p>
           <p> </p>
           <Button
-            className="product-quantity"
-            add={add}
-            remove={remove}
+            currCalories={currCalories}
+            updateCalories={updateCalories}
+            calories={product.calories}
           ></Button>
         </div>
       ))}
