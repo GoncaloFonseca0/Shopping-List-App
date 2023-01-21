@@ -4,16 +4,13 @@ import Header from "../Header";
 import { useState } from "react";
 
 function App() {
-  const [caloriesTotal, setCaloriestotal] = useState(0);
+  const [priceTotal, setPriceTotal] = useState(0);
 
   return (
     <div className="App">
       <Header />
-      <Product
-        currCalories={caloriesTotal}
-        updateCalories={setCaloriestotal}
-      ></Product>
-      <Cart currCalories={caloriesTotal} />
+      <Product currPrice={priceTotal} updatePrice={setPriceTotal}></Product>
+      <Cart currPrice={priceTotal} />
     </div>
   );
 }

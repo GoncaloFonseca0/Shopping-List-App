@@ -1,17 +1,17 @@
 import "./index.scss";
-const budget = 2000;
 
-const Cart = ({ currCalories }) => {
-  const budgetCalories = budget - currCalories;
+const budget = 200;
+
+const Cart = ({ currPrice }) => {
+  const budgetPrice = budget - currPrice;
 
   return (
     <div className="cart">
-      <span> Calories budget: {+budget}</span>
+      <span> Budget: {budget}€</span>
       <br></br>
-
-      <span>Current Total: {+currCalories}</span>
+      <span>Current Total: {+currPrice}€</span>
       <br></br>
-      <span>Current Value: {+budgetCalories}</span>
+      <span>Current Value: {budgetPrice}€</span>
     </div>
   );
 };

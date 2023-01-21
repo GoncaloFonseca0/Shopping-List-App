@@ -1,16 +1,16 @@
 import { useState } from "react";
 import "./index.scss";
 
-const Button = ({ currCalories, updateCalories, calories }) => {
+const Button = ({ currPrice, updatePrice, price }) => {
   const [count, setCount] = useState(0);
   const add = () => {
     setCount(count + 1);
-    updateCalories(currCalories + calories);
+    updatePrice(currPrice + price);
   };
 
   const remove = () => {
     setCount(count - 1);
-    updateCalories(currCalories - calories);
+    updatePrice(currPrice - price);
   };
   return (
     <div>
