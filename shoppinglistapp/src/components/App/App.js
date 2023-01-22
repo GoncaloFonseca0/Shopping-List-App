@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Product currPrice={priceTotal} updatePrice={setPriceTotal}></Product>
+      <Product currPrice={priceTotal} updatePrice={setPriceTotal} />
       <Cart currPrice={priceTotal} />
     </div>
   );

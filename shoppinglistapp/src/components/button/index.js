@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./index.scss";
 
 const Button = ({ currPrice, updatePrice, price }) => {
@@ -13,10 +14,15 @@ const Button = ({ currPrice, updatePrice, price }) => {
     updatePrice(currPrice - price);
   };
   return (
-    <div>
-      <h3>Quantity {count}</h3>
-      <button onClick={() => remove()}>-</button>
-      <button onClick={() => add()}>+</button>
+    <div className="product-button">
+      <button className="primary-button " onClick={() => remove()}>
+        -
+      </button>
+      <h3 className="product-quantity">{count}</h3>
+
+      <button className="secundary-button" onClick={() => add()}>
+        +
+      </button>
     </div>
   );
 };

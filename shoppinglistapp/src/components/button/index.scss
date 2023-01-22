@@ -1,5 +1,18 @@
+.product-button {
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+}
+
+.product-quantity {
+  color: rgb(9, 9, 9);
+  font-size: 10px;
+  margin: 6px 0;
+}
+
 .primary-button {
-  background-color: cadetblue;
+  background-color: rgb(8, 8, 8);
   border: 3px solid black;
   border-radius: 10px;
   color: #fff;
@@ -13,7 +26,7 @@
 }
 
 .secundary-button {
-  background-color: cadetblue;
+  background-color: rgb(17, 18, 18);
   border: 3px solid black;
   border-radius: 10px;
   color: #fff;

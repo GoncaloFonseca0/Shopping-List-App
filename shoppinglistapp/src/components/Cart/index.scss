@@ -1,8 +1,14 @@
 .cart {
-  background-color: rgba(0, 65, 139, 0.952);
+  background-color: rgba(5, 5, 5, 0.952);
   bottom: 0;
-  display: flex;
-  justify-content: center;
   position: fixed;
   width: 100vw;
+}
+
+.footer-info {
+  color: #fff;
+  font-size: 8px;
+  margin: 6px 20px;
+  display: flex;
+  justify-content: center;
 }

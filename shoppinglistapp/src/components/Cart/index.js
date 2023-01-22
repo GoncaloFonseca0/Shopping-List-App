@@ -1,17 +1,20 @@
 import "./index.scss";
 
-const budget = 200;
+const budget = 2000;
 
 const Cart = ({ currPrice }) => {
   const budgetPrice = budget - currPrice;
 
   return (
     <div className="cart">
-      <span> Budget: {budget}€</span>
-      <br></br>
-      <span>Current Total: {+currPrice}€</span>
-      <br></br>
-      <span>Current Value: {budgetPrice}€</span>
+      <div className="footer-info">
+        <span> Budget: {budget}€</span>
+        <br></br>
+        <span>Current Total: {currPrice.toFixed(2)}€</span>
+        <br></br>
+        <span>Current Value: {budgetPrice.toFixed(2)}€</span>
+        <br></br>
+      </div>
     </div>
   );
 };

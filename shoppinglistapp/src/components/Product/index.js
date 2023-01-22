@@ -2,22 +2,26 @@ import useAPI from "../../hook/useAPI";
 import Button from "../Button";
 import "./index.scss";
 
-const Product = ({ currCalories, updateCalories }) => {
+const Product = ({ currPrice, updatePrice }) => {
   const { apiData } = useAPI();
 
   return (
     <div className="products-title">
       {apiData.map((product) => (
-        <div className="Products">
-          <img alt="product img" src={product.imgSrc}></img>
-          <h1 className="name">{product.name}</h1>
-          <p>{product.description}</p>
-          <p>Price: {product.price}</p>
+        <div className="Products" key={product.id}>
+          <h1 className="product-title">{product.title}</h1>
+          <p className="product-price">{product.price}</p>
+          <p className="product-description">{product.description}</p>
+          <img
+            className="product-img"
+            alt={product.altText}
+            src={product.image}
+          />
 
           <Button
-            currCalories={currCalories}
-            updateCalories={updateCalories}
-            price={product.Price}
+            currPrice={currPrice}
+            updatePrice={updatePrice}
+            price={product.price}
           ></Button>
         </div>
       ))}
